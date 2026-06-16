@@ -1,9 +1,1034 @@
+
 <!DOCTYPE html>
-<html>
-<head><title>GaChi Handyman Services</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GaChi Handyman Services | Atlanta, GA</title>
+  <meta name="description" content="GaChi Handyman Services LLC — professional handyman, plumbing, electrical, painting, and drywall services in Atlanta, Georgia. Book your service online today." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:     #1A2456;
+      --charcoal:  #141c42;
+      --steel:     #1e2a5e;
+      --orange:    #E8631A;
+      --orange-dk: #C4521A;
+      --white:     #FFFFFF;
+      --offwhite:  #F5F4F2;
+      --gray:      #888888;
+      --light:     #E8E6E2;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--offwhite);
+      color: var(--black);
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--black);
+      padding: 1rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--orange);
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-sub {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+      display: block;
+      margin-top: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav ul a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--orange); }
+    .nav-book {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+    }
+    .nav-book:hover { background: var(--orange-dk) !important; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 5rem 2.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 45%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        -55deg,
+        transparent,
+        transparent 18px,
+        rgba(232,99,26,0.06) 18px,
+        rgba(232,99,26,0.06) 20px
+      );
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 3px;
+      background: var(--orange);
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 9vw, 6.5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-orange {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-orange:hover { background: var(--orange-dk); transform: translateY(-1px); }
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.8);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-outline-white:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--orange);
+      padding: 1rem 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .trust-item span { font-size: 1.2rem; }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 5rem 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 3px;
+      background: var(--orange);
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--black);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      margin-bottom: 3rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5px;
+      background: var(--light);
+    }
+    .service-card {
+      background: var(--white);
+      padding: 2rem 1.75rem;
+      position: relative;
+      transition: background 0.2s;
+      cursor: default;
+    }
+    .service-card:hover { background: var(--black); }
+    .service-card:hover h3 { color: var(--white); }
+    .service-card:hover p { color: rgba(255,255,255,0.65); }
+    .service-card:hover .service-num { color: var(--orange); }
+    .service-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--light);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      transition: color 0.2s;
+    }
+    .service-icon { font-size: 1.75rem; margin-bottom: 0.75rem; display: block; }
+    .service-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      margin-bottom: 0.6rem;
+      transition: color 0.2s;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      transition: color 0.2s;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how {
+      background: var(--black);
+      color: var(--white);
+      padding: 5rem 2.5rem;
+    }
+    .how-inner { max-width: 1100px; margin: 0 auto; }
+    .how .section-eyebrow { color: var(--orange); }
+    .how .section-title { color: var(--white); margin-bottom: 3rem; }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .how-step {
+      padding: 2rem;
+      border-left: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+    }
+    .how-step:first-child { border-left: none; }
+    .step-arrow {
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--orange);
+      font-size: 1.4rem;
+      z-index: 1;
+    }
+    .how-step:last-child .step-arrow { display: none; }
+    .step-letter {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: rgba(232,99,26,0.15);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .how-step h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .how-step p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+    }
+
+    /* ── BOOKING ── */
+    .booking {
+      padding: 5rem 2.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .booking-card {
+      background: var(--white);
+      border-top: 5px solid var(--orange);
+      padding: 3rem 2.5rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+    .booking-card h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--black);
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .booking-card p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    input, select, textarea {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--light);
+      border-radius: 2px;
+      background: var(--offwhite);
+      color: var(--black);
+      width: 100%;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--orange);
+      background: var(--white);
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    .submit-btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover { background: var(--orange-dk); }
+
+    /* ── WHY GACHI ── */
+    .why {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 5rem 2.5rem;
+    }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .why .section-eyebrow { color: var(--orange); }
+    .why .section-title { color: var(--white); margin-bottom: 1.5rem; }
+    .why-body {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .why-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .why-check {
+      width: 24px;
+      height: 24px;
+      background: var(--orange);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--white);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-weight: 900;
+    }
+    .why-item p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+    .why-item strong { color: var(--white); }
+    .why-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      background: rgba(255,255,255,0.06);
+    }
+    .why-stat {
+      background: var(--steel);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .why-stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--orange);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .why-stat-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── GALLERY ── */
+    .gallery {
+      background: var(--offwhite);
+      padding: 5rem 2.5rem;
+      border-top: 3px solid var(--light);
+    }
+    .gallery-inner { max-width: 1100px; margin: 0 auto; }
+    .gallery-lead {
+      font-size: 0.975rem;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      max-width: 600px;
+    }
+    .gallery-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      border-left: 4px solid var(--orange);
+      padding-left: 0.75rem;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+    }
+    /* Before & After */
+    .ba-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .ba-card {
+      background: var(--white);
+      border: 1.5px solid var(--light);
+      border-radius: 2px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .ba-slot {
+      background: var(--offwhite);
+      border: 2px dashed var(--light);
+      border-radius: 2px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+    .ba-slot.after { border-color: var(--orange); background: #fff8f5; }
+    .slot-icon { font-size: 1.75rem; }
+    .slot-text { font-weight: 700; font-size: 0.875rem; color: var(--black); }
+    .slot-sub { font-size: 0.75rem; color: #999; }
+    .ba-arrow {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--orange);
+      font-weight: 900;
+    }
+    .ba-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--black);
+      text-align: center;
+    }
+    /* Photo grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .photo-slot {
+      background: var(--white);
+      border: 2px dashed var(--light);
+      border-radius: 2px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: border-color 0.2s;
+    }
+    .photo-slot:hover { border-color: var(--orange); }
+    /* Video grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .video-slot {
+      background: var(--black);
+      border-radius: 2px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .video-icon {
+      font-size: 2.5rem;
+      color: var(--orange);
+    }
+    .video-slot .slot-text { color: rgba(255,255,255,0.75); font-size: 0.875rem; font-weight: 600; }
+    .video-slot .slot-sub { color: rgba(255,255,255,0.4); font-size: 0.75rem; }
+
+    /* ── SERVICE AREA ── */
+    .area {
+      background: var(--offwhite);
+      padding: 4rem 2.5rem;
+      text-align: center;
+      border-top: 3px solid var(--light);
+    }
+    .area-inner { max-width: 700px; margin: 0 auto; }
+    .area h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+    }
+    .area p {
+      font-size: 0.975rem;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .area-pill {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      margin: 0.25rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.45);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      line-height: 2;
+      border-top: 3px solid var(--orange);
+    }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+    }
+    .footer-logo span { color: var(--orange); }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .why-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr; }
+      .how-step { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); }
+      .how-step:first-child { border-top: none; }
+      .step-arrow { display: none; }
+      .trust-bar { gap: 1.5rem; }
+    }
+  </style>
+</head>
 <body>
-  <h1>GaChi Handyman Services LLC</h1>
-  <p>Professional handyman services in Macon, GA.</p>
-  <p>Call us: (678)408-9090</p>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      Ga<span>Chi</span>
+      <span class="nav-sub">Handyman Services LLC · Atlanta, GA</span>
+    </div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#book" class="nav-book">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Atlanta, Georgia's Trusted Handyman</div>
+      <h1>We Fix It.<br /><em>You Relax.</em></h1>
+      <p class="hero-sub">
+        From plumbing and electrical to painting, drywall, and general repairs —
+        GaChi Handyman Services gets the job done right, on time, every time.
+      </p>
+      <div class="hero-actions">
+        <a href="#book" class="btn-orange">Book a Service Online</a>
+        <a href="#services" class="btn-outline-white">See All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>✓</span> Licensed & Insured</div>
+    <div class="trust-item"><span>📞</span> (678) 408-9090</div>
+    <div class="trust-item"><span>✓</span> Upfront Pricing</div>
+    <div class="trust-item"><span>✓</span> Work Guaranteed</div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <span class="service-icon">🔨</span>
+        <h3>General Handyman</h3>
+        <p>Furniture assembly, door and window repairs, caulking, weatherstripping, minor carpentry — the everyday fixes that pile up fast.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <span class="service-icon">🔧</span>
+        <h3>Plumbing</h3>
+        <p>Leaky faucets, running toilets, fixture replacements, drain clogs, and minor pipe repairs. We stop the drip before it becomes a flood.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <span class="service-icon">⚡</span>
+        <h3>Electrical</h3>
+        <p>Outlet and switch replacement, ceiling fan installation, light fixture swaps, and minor electrical repairs handled safely and correctly.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <span class="service-icon">🖌️</span>
+        <h3>Painting</h3>
+        <p>Interior and exterior painting with clean prep, crisp edges, and lasting finish. We treat your home like it's our own.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <span class="service-icon">🏗️</span>
+        <h3>Drywall</h3>
+        <p>Hole patches, crack repairs, texture matching, and full drywall installation. When it's done, you won't know it was ever there.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <span class="service-icon">📋</span>
+        <h3>Not Sure?</h3>
+        <p>Book a general assessment and we'll come take a look, give you a straight answer, and quote you fairly. No pressure, no guesswork.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="how-inner">
+      <div class="section-eyebrow">The Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-arrow">›</div>
+          <div class="step-letter">A</div>
+          <h4>Book Online</h4>
+          <p>Fill out our simple booking form with your service type, address, and preferred time.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-arrow">›</div>
+          <div class="step-letter">B</div>
+          <h4>We Confirm</h4>
+          <p>You'll hear from us within 24 hours to confirm your appointment and answer any questions.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-arrow">›</div>
+          <div class="step-letter">C</div>
+          <h4>We Show Up</h4>
+          <p>Our team arrives on time, assesses the job, and gives you an upfront quote before any work begins.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-letter">D</div>
+          <h4>Job Done</h4>
+          <p>We complete the work clean and right. You inspect, approve, and pay only when you're satisfied.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking" id="book">
+    <div class="booking-card">
+      <h2>Book a Service</h2>
+      <p>Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Crystal" />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Hunt" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="(478) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@email.com" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="address">Service Address</label>
+          <input type="text" id="address" placeholder="Street address, Atlanta, GA" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>General Handyman</option>
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>Painting</option>
+            <option>Drywall</option>
+            <option>Not Sure / Assessment</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="details">Describe the Job</label>
+          <textarea id="details" placeholder="Tell us what needs to be done — the more detail, the better..."></textarea>
+        </div>
+      </div>
+      <button class="submit-btn" onclick="alert('Thanks! We\'ll be in touch within 24 hours to confirm your appointment.')">
+        Submit Booking Request →
+      </button>
+    </div>
+  </section>
+
+  <!-- WHY GACHI -->
+  <section class="why" id="why">
+    <div class="why-inner">
+      <div>
+        <div class="section-eyebrow">Why GaChi</div>
+        <h2 class="section-title">Atlanta's handyman team that shows up and gets it done.</h2>
+        <p class="why-body">
+          We're not a franchise. We're a local Atlanta business run by people who live here,
+          work here, and care about the quality of work we put into this community.
+          When you call GaChi, you get straight answers, fair prices, and work done right.
+        </p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <p><strong>Upfront pricing</strong> — you know the cost before we lift a tool</p>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <p><strong>On-time arrival</strong> — we respect your schedule as much as our own</p>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <p><strong>Clean work</strong> — we leave your space cleaner than we found it</p>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <p><strong>Satisfaction guaranteed</strong> — if it's not right, we make it right</p>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <p><strong>Locally owned</strong> — your money stays in Atlanta, Georgia</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-stats">
+        <div class="why-stat">
+          <span class="why-stat-num">10+</span>
+          <span class="why-stat-label">Years Experience</span>
+        </div>
+        <div class="why-stat">
+          <span class="why-stat-num">5</span>
+          <span class="why-stat-label">Service Categories</span>
+        </div>
+        <div class="why-stat">
+          <span class="why-stat-num">24hr</span>
+          <span class="why-stat-label">Response Time</span>
+        </div>
+        <div class="why-stat">
+          <span class="why-stat-num">100%</span>
+          <span class="why-stat-label">Satisfaction Goal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-inner">
+      <div class="section-eyebrow">Our Work</div>
+      <h2 class="section-title">Before & After · Completed Projects · Videos</h2>
+      <p class="gallery-lead">Real jobs. Real results. Upload your project photos and videos here to show customers what GaChi can do.</p>
+
+      <!-- BEFORE & AFTER -->
+      <div class="gallery-label">Before & After</div>
+      <div class="ba-grid">
+        <div class="ba-card">
+          <div class="ba-slot before">
+            <span class="slot-icon">📷</span>
+            <span class="slot-text">Before Photo</span>
+            <span class="slot-sub">Add image here</span>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-slot after">
+            <span class="slot-icon">✅</span>
+            <span class="slot-text">After Photo</span>
+            <span class="slot-sub">Add image here</span>
+          </div>
+          <div class="ba-label">Drywall Repair</div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-slot before">
+            <span class="slot-icon">📷</span>
+            <span class="slot-text">Before Photo</span>
+            <span class="slot-sub">Add image here</span>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-slot after">
+            <span class="slot-icon">✅</span>
+            <span class="slot-text">After Photo</span>
+            <span class="slot-sub">Add image here</span>
+          </div>
+          <div class="ba-label">Interior Painting</div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-slot before">
+            <span class="slot-icon">📷</span>
+            <span class="slot-text">Before Photo</span>
+            <span class="slot-sub">Add image here</span>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-slot after">
+            <span class="slot-icon">✅</span>
+            <span class="slot-text">After Photo</span>
+            <span class="slot-sub">Add image here</span>
+          </div>
+          <div class="ba-label">Plumbing Fix</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED WORK -->
+      <div class="gallery-label">Completed Work</div>
+      <div class="photo-grid">
+        <div class="photo-slot"><span class="slot-icon">📷</span><span class="slot-text">Add Photo</span></div>
+        <div class="photo-slot"><span class="slot-icon">📷</span><span class="slot-text">Add Photo</span></div>
+        <div class="photo-slot"><span class="slot-icon">📷</span><span class="slot-text">Add Photo</span></div>
+        <div class="photo-slot"><span class="slot-icon">📷</span><span class="slot-text">Add Photo</span></div>
+        <div class="photo-slot"><span class="slot-icon">📷</span><span class="slot-text">Add Photo</span></div>
+        <div class="photo-slot"><span class="slot-icon">📷</span><span class="slot-text">Add Photo</span></div>
+      </div>
+
+      <!-- VIDEOS -->
+      <div class="gallery-label">Videos</div>
+      <div class="video-grid">
+        <div class="video-slot">
+          <span class="video-icon">▶</span>
+          <span class="slot-text">Paste YouTube or TikTok link here</span>
+          <span class="slot-sub">Replace this div with an iframe embed</span>
+        </div>
+        <div class="video-slot">
+          <span class="video-icon">▶</span>
+          <span class="slot-text">Paste YouTube or TikTok link here</span>
+          <span class="slot-sub">Replace this div with an iframe embed</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="area">
+    <div class="area-inner">
+      <h2>📍 Service Area</h2>
+      <p>We proudly serve Atlanta and surrounding Metro Atlanta communities. Not sure if we come to you? Book an assessment and ask — we'll let you know.</p>
+      <div>
+        <span class="area-pill">Atlanta</span>
+        <span class="area-pill">Fulton County</span>
+        <span class="area-pill">Decatur</span>
+        <span class="area-pill">Marietta</span>
+        <span class="area-pill">Smyrna</span>
+        <span class="area-pill">College Park</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Ga<span>Chi</span> Handyman Services LLC</div>
+    <p>Atlanta, Georgia</p>
+    <p><a href="tel:6784089090" style="color:var(--orange);">(678) 408-9090</a></p>
+    <p><a href="mailto:gachi.handyman@mail.com">gachi.handyman@mail.com</a></p>
+    <p style="margin-top:0.5rem;">&copy; 2026 GaChi Handyman Services LLC. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
