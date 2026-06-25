@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GaChi Handyman Services | Atlanta, GA</title>
-  <meta name="description" content="GaChi Handyman Services LLC — professional handyman, plumbing, electrical, painting, and drywall services in Atlanta, Georgia. Book your service online today." />
+  <title>GaChi | We Got You | Atlanta, GA</title>
+  <meta name="description" content="GaChi — We Got You — wraparound home services in Atlanta, GA — handyman, plumbing, electrical, painting & more. One call, consider it done." />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -617,6 +616,217 @@
     .video-slot .slot-text { color: rgba(255,255,255,0.75); font-size: 0.875rem; font-weight: 600; }
     .video-slot .slot-sub { color: rgba(255,255,255,0.4); font-size: 0.75rem; }
 
+    /* ── LOGO HEADER ── */
+    .logo-header {
+      background: var(--black);
+      padding: 2rem 2.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border-bottom: 4px solid var(--orange);
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .logo-house {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+    .logo-text-block { display: flex; flex-direction: column; }
+    .logo-main {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    }
+    .logo-sub-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border-top: 2px solid var(--orange);
+      border-bottom: 2px solid var(--orange);
+      padding: 0.15rem 0;
+      margin-top: 0.15rem;
+    }
+    .logo-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
+    .logo-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .logo-contact-item span { color: var(--orange); font-size: 1.1rem; }
+    .logo-badge {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.85rem;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.2;
+      border: 3px solid var(--white);
+    }
+
+    /* ── PRICING ── */
+    .pricing {
+      background: var(--white);
+      padding: 5rem 2.5rem;
+    }
+    .pricing-inner { max-width: 1100px; margin: 0 auto; }
+    .pricing .section-title { margin-bottom: 0.5rem; }
+    .pricing-lead {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 3rem;
+      font-style: italic;
+    }
+
+    /* Labor rates */
+    .labor-rates {
+      background: var(--black);
+      color: var(--white);
+      padding: 1.75rem 2rem;
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .labor-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      margin-bottom: 0.25rem;
+    }
+    .labor-items { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .labor-item { font-size: 0.95rem; color: rgba(255,255,255,0.85); }
+    .labor-item strong { color: var(--orange); font-size: 1.05rem; }
+
+    /* Pricing grid */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .price-card {
+      background: var(--offwhite);
+      border-top: 4px solid var(--orange);
+      padding: 1.5rem;
+      border-radius: 2px;
+    }
+    .price-card h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--black);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--light);
+    }
+    .price-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .price-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.875rem;
+      color: #555;
+      gap: 0.5rem;
+    }
+    .price-list li .p-name { flex: 1; }
+    .price-list li .p-price {
+      font-weight: 700;
+      color: var(--black);
+      white-space: nowrap;
+      font-size: 0.875rem;
+    }
+
+    /* Special rates */
+    .special-rates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .special-card {
+      background: var(--black);
+      color: var(--white);
+      padding: 1.25rem 1.5rem;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .special-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .special-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      display: block;
+    }
+    .special-value {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    /* Notes */
+    .pricing-notes {
+      background: var(--offwhite);
+      border-left: 4px solid var(--orange);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 2px 2px 0;
+    }
+    .pricing-notes h5 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      margin-bottom: 0.6rem;
+    }
+    .pricing-notes ul { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+    .pricing-notes li { font-size: 0.85rem; color: #666; font-style: italic; }
+    .pricing-notes li::before { content: '• '; color: var(--orange); font-weight: 700; }
+
     /* ── SERVICE AREA ── */
     .area {
       background: var(--offwhite);
@@ -690,6 +900,22 @@
 </head>
 <body>
 
+  <!-- LOGO HEADER -->
+  <div class="logo-header">
+    <div class="logo-mark">
+      <div class="logo-house">🏠</div>
+      <div class="logo-text-block">
+        <div class="logo-main">GaChi</div>
+        <div class="logo-sub-text">— Handyman Services LLC —</div>
+      </div>
+    </div>
+    <div class="logo-contact">
+      <div class="logo-contact-item"><span>📞</span> (678) 408-9090</div>
+      <div class="logo-contact-item"><span>✉</span> gachi.handyman@mail.com</div>
+    </div>
+    <div class="logo-badge">FULLY<br/>INSURED</div>
+  </div>
+
   <!-- NAV -->
   <nav>
     <div class="nav-logo">
@@ -698,6 +924,7 @@
     </div>
     <ul>
       <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#book">Book</a></li>
@@ -708,11 +935,11 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">Atlanta, Georgia's Trusted Handyman</div>
-      <h1>We Fix It.<br /><em>You Relax.</em></h1>
+      <div class="hero-eyebrow">Atlanta, Georgia's Go-To Service Crew</div>
+      <h1>We Got<br /><em>You.</em></h1>
       <p class="hero-sub">
-        From plumbing and electrical to painting, drywall, and general repairs —
-        GaChi Handyman Services gets the job done right, on time, every time.
+        From handyman repairs to painting, plumbing, electrical, and beyond —
+        GaChi has got you covered. One call, consider it done.
       </p>
       <div class="hero-actions">
         <a href="#book" class="btn-orange">Book a Service Online</a>
@@ -874,9 +1101,9 @@
         <div class="section-eyebrow">Why GaChi</div>
         <h2 class="section-title">Atlanta's handyman team that shows up and gets it done.</h2>
         <p class="why-body">
-          We're not a franchise. We're a local Atlanta business run by people who live here,
+          We're not a franchise. GaChi is a local Atlanta business run by people who live here,
           work here, and care about the quality of work we put into this community.
-          When you call GaChi, you get straight answers, fair prices, and work done right.
+          When you call GaChi, you get straight answers, fair prices, and work done right. Whatever the job — we got you.
         </p>
         <div class="why-list">
           <div class="why-item">
@@ -1002,6 +1229,106 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-inner">
+      <div class="section-eyebrow">Sample Pricing</div>
+      <h2 class="section-title">What to Expect to Pay</h2>
+      <p class="pricing-lead">Pricing may vary based on job scope and materials. Materials billed separately. Estimates provided upon request.</p>
+
+      <!-- Labor Rates -->
+      <div class="labor-rates">
+        <div>
+          <div class="labor-title">Labor Rates</div>
+        </div>
+        <div class="labor-items">
+          <div class="labor-item">Standard Labor: <strong>$85/hr</strong> <span style="color:rgba(255,255,255,0.5); font-size:0.8rem;">(1-hr min)</span></div>
+          <div class="labor-item">Additional Time: <strong>$65/hr</strong> <span style="color:rgba(255,255,255,0.5); font-size:0.8rem;">(after first hour)</span></div>
+          <div class="labor-item">Helper Rate: <strong>$40/hr</strong></div>
+        </div>
+      </div>
+
+      <!-- Service Pricing Grid -->
+      <div class="price-grid">
+        <div class="price-card">
+          <h4>🏗️ Drywall</h4>
+          <ul class="price-list">
+            <li><span class="p-name">Small Patch</span><span class="p-price">$75 – $125</span></li>
+            <li><span class="p-name">Medium Patch</span><span class="p-price">$150 – $300</span></li>
+            <li><span class="p-name">Large Repair</span><span class="p-price">$350+</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h4>🖌️ Painting</h4>
+          <ul class="price-list">
+            <li><span class="p-name">Touch-Up</span><span class="p-price">$75 – $150</span></li>
+            <li><span class="p-name">Single Room</span><span class="p-price">$250 – $500</span></li>
+            <li><span class="p-name">Full Interior</span><span class="p-price">$1,200+</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h4>🔩 Installations</h4>
+          <ul class="price-list">
+            <li><span class="p-name">TV Mounting</span><span class="p-price">$100 – $180</span></li>
+            <li><span class="p-name">Appliance Install</span><span class="p-price">$150 – $300</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h4>🔧 Plumbing</h4>
+          <ul class="price-list">
+            <li><span class="p-name">Faucet Replacement</span><span class="p-price">$120 – $180</span></li>
+            <li><span class="p-name">Toilet Install</span><span class="p-price">$150 – $250</span></li>
+            <li><span class="p-name">Minor Leak Repair</span><span class="p-price">$100 – $200</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h4>⚡ Electrical</h4>
+          <ul class="price-list">
+            <li><span class="p-name">Light Fixture Install</span><span class="p-price">$100 – $175</span></li>
+            <li><span class="p-name">Ceiling Fan Install</span><span class="p-price">$150 – $250</span></li>
+            <li><span class="p-name">Outlet/Switch Replace</span><span class="p-price">$75 – $125</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Special Rates -->
+      <div class="special-rates">
+        <div class="special-card">
+          <span class="special-icon">🏠</span>
+          <div>
+            <span class="special-label">Property Turnover</span>
+            <span class="special-value">$300 – $2,500+</span>
+          </div>
+        </div>
+        <div class="special-card">
+          <span class="special-icon">⚠️</span>
+          <div>
+            <span class="special-label">Emergency Service</span>
+            <span class="special-value">$150+ &nbsp;|&nbsp; Same-Day: +$50–$100</span>
+          </div>
+        </div>
+        <div class="special-card">
+          <span class="special-icon">🚗</span>
+          <div>
+            <span class="special-label">Trip Fee</span>
+            <span class="special-value">$50 <span style="font-size:0.8rem; color:rgba(255,255,255,0.5);">(waived if job approved)</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="pricing-notes">
+        <h5>Notes</h5>
+        <ul>
+          <li>Pricing may vary based on job scope and materials</li>
+          <li>Materials billed separately</li>
+          <li>Bulk / contract rates available</li>
+          <li>Estimates provided upon request</li>
+        </ul>
+      </div>
     </div>
   </section>
 
